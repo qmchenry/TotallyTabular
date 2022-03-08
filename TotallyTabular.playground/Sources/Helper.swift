@@ -3,6 +3,7 @@ import TabularData
 
 public let collectionURL = Bundle.main.url(forResource: "qeek-collection", withExtension: "csv")!
 public let playsURL = Bundle.main.url(forResource: "qeek-plays-2022-03-06", withExtension: "csv")!
+public let mtcarsURL = Bundle.main.url(forResource: "mtcars", withExtension: "csv")!
 
 public let columns = ["play ID", "game ID", "game name", "date", "player 1 name", "player 1 win", "player 2 name", "player 2 win"]
 

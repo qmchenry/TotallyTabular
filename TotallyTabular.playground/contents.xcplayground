@@ -6,5 +6,6 @@
         <page name='Filtering and grouping'/>
         <page name='Joining'/>
         <page name='SwiftUIing'/>
+        <page name='Stats'/>
     </pages>
 </playground>
