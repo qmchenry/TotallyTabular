@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 import Foundation
 import TabularData
 
@@ -26,10 +25,7 @@ print(processedPlays.grouped(by: "date", timeUnit: .weekday).counts(order: .desc
 
 print(processedPlays.grouped(by: "date", timeUnit: .year).counts(order: .descending))
 
-
 /// column `names`
-
 print(processedPlays.columns.map { $0.name })
-
 
 //: [Next](@next)

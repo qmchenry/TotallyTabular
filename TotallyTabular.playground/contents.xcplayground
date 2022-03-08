@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='Basic CSV loading'/>
         <page name='Loading options'/>
+        <page name='Stats'/>
         <page name='Filtering and grouping'/>
         <page name='Joining'/>
         <page name='SwiftUIing'/>
-        <page name='Stats'/>
+        <page name='Other cool stuff'/>
     </pages>
 </playground>

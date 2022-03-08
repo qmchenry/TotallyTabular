@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 import TabularData
 
 var options = CSVReadingOptions()
@@ -21,9 +20,6 @@ let joined = processedPlays.joined(collection, on: ("game ID"))
 
 print(joined.columns.map { $0.name })
 
-// print(joined.filter(on: .init("rank", Int.self), { ($0 ?? 0) > 0 }).sorted(on: "right.rank", order: .ascending))
-
 print(joined.sorted(on: "right.yearpublished", order: .descending))
-
 
 //: [Next](@next)

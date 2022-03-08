@@ -1,3 +1,4 @@
+//: [Previous](@previous)
 import Foundation
 import TabularData
 
@@ -24,7 +25,7 @@ print(datedPlays)
 /// `game name` isn't very readable...
 
 datedPlays.transformColumn("game name") { data in
-    String(data: data, encoding: .ascii)
+    String(data: data, encoding: .utf8)
 }
 print(datedPlays)
 
@@ -47,12 +48,12 @@ func winner(name: String?, win: Int?) -> WinnerName? {
     }
 }
 
-datedPlays.combineColumns(.init("player 1 name", String.self), .init("player 1 win", Int.self), into: "winner 1", transform: winner)
+datedPlays.combineColumns(ColumnID("player 1 name", String.self), ColumnID("player 1 win", Int.self), into: "winner 1", transform: winner)
 print(datedPlays)
-datedPlays.combineColumns(.init("player 2 name", String.self), .init("player 2 win", Int.self), into: "winner 2", transform: winner)
+datedPlays.combineColumns(ColumnID("player 2 name", String.self), ColumnID("player 2 win", Int.self), into: "winner 2", transform: winner)
 print(datedPlays)
 
-datedPlays.combineColumns(.init("winner 1", WinnerName.self), .init("winner 2", WinnerName.self), into: "winner") { (winner1, winner2) -> WinnerName? in
+datedPlays.combineColumns(ColumnID("winner 1", WinnerName.self), ColumnID("winner 2", WinnerName.self), into: "winner") { (winner1, winner2) -> WinnerName? in
     switch (winner1, winner2) {
     case (.jennifer, .quinn), (.quinn, .jennifer): return .tie
     case (.jennifer, _), (_, .jennifer): return .jennifer
@@ -66,3 +67,5 @@ print(datedPlays)
 /// -> `processedPlays`
 
 print(processedPlays)
+
+//: [Next](@next)

@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 import SwiftUI
 import PlaygroundSupport
 import TabularData
@@ -26,6 +25,5 @@ struct ContentView: View {
 }
 
 PlaygroundPage.current.setLiveView(ContentView())
-
 
 //: [Next](@next)
